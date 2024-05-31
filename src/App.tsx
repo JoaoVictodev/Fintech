@@ -7,11 +7,13 @@ import "./Style.css";
 function App() {
   return (
     <DataContextProvider>
-      <Header />
-      <main>
+      <div className="container">
         <Sidenav />
-        <Resumo />
-      </main>
+        <main>
+          <Header />
+          <Resumo />
+        </main>
+      </div>
     </DataContextProvider>
   );
 }
