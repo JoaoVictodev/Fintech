@@ -17,3 +17,10 @@ export type IVenda = {
   parcelas: null | number;
   data: string;
 };
+
+export type VendaDia = {
+  data: string;
+  pago: number;
+  processando: number;
+  falha: number;
+};
