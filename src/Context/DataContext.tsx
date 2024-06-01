@@ -20,12 +20,12 @@ function getDate(n: number) {
 }
 
 export const DataContextProvider = ({ children }: React.PropsWithChildren) => {
-  const [inicio, setInicio] = React.useState(getDate(0));
-  const [final, setFinal] = React.useState(getDate(14));
+  const [inicio, setInicio] = React.useState(getDate(14));
+  const [final, setFinal] = React.useState(getDate(0));
   const { data, loading, error } = useFetch<IVenda[]>(
-    `https://data.origamid.dev/vendas/?inico=${inicio}&final=${final}`
+    `https://data.origamid.dev/vendas/?inicio=${inicio}&final=${final}`
   );
-
+  
   return (
     <DataContext.Provider
       value={{ data, loading, error, inicio, setInicio, final, setFinal }}
